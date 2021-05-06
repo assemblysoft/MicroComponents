@@ -1,4 +1,4 @@
-# MicroComponents
+# ASP.NET Core and Blazor Micro Components/Views
 ### Exploration into a modular approach for an ASP.NET Core application
 
 > Commits attempt to match each milestone to see each solution build from scratch
