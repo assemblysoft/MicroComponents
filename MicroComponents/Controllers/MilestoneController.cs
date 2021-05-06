@@ -42,6 +42,12 @@ namespace MicroComponents.Controllers
            return View();
         }
 
+        public IActionResult Milestone4()
+        {
+            return View();
+        }
+        
+
         public IActionResult Privacy()
         {
             return View();

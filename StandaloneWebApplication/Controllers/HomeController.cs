@@ -29,6 +29,11 @@ namespace StandaloneWebApplication.Controllers
             return View();         
         }
 
+        public IActionResult WeatherForecastAppViewPartial()
+        {
+            return PartialView("WeatherForecastAppView");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
