@@ -40,7 +40,10 @@ namespace MicroComponents
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+
+            app.UseBlazorFrameworkFiles();
+
+            app.UseStaticFiles();                      
 
             app.UseRouting();
 
