@@ -1,0 +1,23 @@
+﻿@using Microsoft.Extensions.Configuration
+
+@inject IConfiguration Configuration
+
+@{
+    ViewData["Title"] = "Milestone3";
+}
+
+<div class="text-center">
+    <h5 class="display-6">Load razor view from standlaone web application</h5>
+</div>
+
+<div id="weatherComponentView">Loading...</div>
+
+
+<script>
+ $.ajax({
+     url: '@Configuration["WeatherComponentViewUrl"]',    
+        success: function (data) {
+        $('#weatherComponentView').html(data);
+        }
+ });
+</script>

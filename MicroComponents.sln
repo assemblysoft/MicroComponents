@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroProxyApiClient", "MicroProxyApiClient\MicroProxyApiClient.csproj", "{06384C3F-EBDC-45F7-8E8B-39E0157EE206}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandaloneWebApplication", "StandaloneWebApplication\StandaloneWebApplication.csproj", "{BA45C199-5D07-4C09-9C04-574D8689448A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{06384C3F-EBDC-45F7-8E8B-39E0157EE206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06384C3F-EBDC-45F7-8E8B-39E0157EE206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06384C3F-EBDC-45F7-8E8B-39E0157EE206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA45C199-5D07-4C09-9C04-574D8689448A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA45C199-5D07-4C09-9C04-574D8689448A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA45C199-5D07-4C09-9C04-574D8689448A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA45C199-5D07-4C09-9C04-574D8689448A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

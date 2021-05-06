@@ -37,6 +37,11 @@ namespace MicroComponents.Controllers
             return View(weatherForecastViewModel);
         }
 
+        public IActionResult Milestone3()
+        {
+           return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
