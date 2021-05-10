@@ -1,0 +1,33 @@
+﻿@using System.Text.Json
+@using SharedLibrary.Models
+
+<h3>ViewComponent1</h3>
+
+@if (weatherForecasts != null)
+{
+    foreach (var forcast in weatherForecasts)
+    {
+        <p>@forcast.Summary</p>
+        <p>@forcast.TemperatureC</p>
+    }
+}
+
+@code {
+        
+    List<WeatherForecast> weatherForecasts;
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient client = new HttpClient();
+        
+
+        if (weatherForecasts == null)
+        {
+          
+
+            weatherForecasts = await client.GetFromJsonAsync<List<WeatherForecast>>
+      ("https://localhost:44341/weatherforecast");
+
+          
+        }
+    }
+}

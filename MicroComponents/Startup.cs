@@ -24,6 +24,10 @@ namespace MicroComponents
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddRazorPages();
+            services.AddServerSideBlazor();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +36,7 @@ namespace MicroComponents
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseWebAssemblyDebugging();
             }
             else
             {
@@ -45,7 +50,7 @@ namespace MicroComponents
 
             app.UseStaticFiles();                      
 
-            app.UseRouting();
+            app.UseRouting();            
 
             app.UseAuthorization();
 

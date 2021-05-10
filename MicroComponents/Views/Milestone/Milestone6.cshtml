@@ -1,0 +1,29 @@
+﻿@using BlazorApp1;
+@using Microsoft.Extensions.Configuration
+
+
+@inject IConfiguration Configuration
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Isolated component on separate route</h1>
+    <p>Navigate to specific milestone to see individual solutions</p>
+</div>
+
+
+<div class="text-center">
+    <h6 class="display-4">Micro component feature</h6>
+
+    <component type="typeof(BigFeature)" render-mode="WebAssembly" />
+
+    <p>additional surrounding markup</p>
+</div>
+
+
+<div class="text-center">
+    <h6 class="display-4">Another page feature</h6>
+    <p>continue with page flow</p>
+</div>

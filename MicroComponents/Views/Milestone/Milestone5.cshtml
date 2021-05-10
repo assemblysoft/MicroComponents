@@ -1,0 +1,13 @@
+﻿@using SimpleBlazorComponent
+@{
+    ViewData["Title"] = "Milestone5";
+}
+
+
+<div class="text-center">
+    <h5 class="display-6">Include a more complex blazor component, contained in a razor class library, in an existing ASP.NET Core MVC app</h5>
+</div>
+
+<component type="typeof(ComplexBlazorComponent.Complex)" render-mode="WebAssemblyPrerendered" />
+
+<script src="_framework/blazor.webassembly.js"></script>

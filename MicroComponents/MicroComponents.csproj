@@ -6,10 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazorApp1\BlazorApp1.csproj" />
+    <ProjectReference Include="..\ComplexBlazorComponent\ComplexBlazorComponent.csproj" />
     <ProjectReference Include="..\MicroProxyApiClient\MicroProxyApiClient.csproj" />
     <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
     <ProjectReference Include="..\SimpleBlazorComponent\SimpleBlazorComponent.csproj" />

@@ -21,6 +21,7 @@ namespace MicroProxyAPI
             Configuration = configuration;
         }
 
+        readonly string allowAnyOriginPolicyName = "_allowAnyOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -28,6 +29,18 @@ namespace MicroProxyAPI
         {
 
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: allowAnyOriginPolicyName,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MicroProxyAPI", Version = "v1" });
@@ -47,6 +60,8 @@ namespace MicroProxyAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(allowAnyOriginPolicyName);
 
             app.UseAuthorization();
 

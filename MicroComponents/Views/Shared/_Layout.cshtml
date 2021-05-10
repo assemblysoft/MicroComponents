@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" />
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <base href="~/" />
 </head>
 <body>
     <header>
@@ -42,9 +44,11 @@
             &copy; 2021 - MicroComponents - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="_framework/blazor.webassembly.js"></script>
 </body>
 </html>

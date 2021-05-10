@@ -1,0 +1,23 @@
+﻿@using SharedLibrary.Models
+@inject HttpClient Http
+
+<h3>BigFeature</h3>
+@code {
+
+    List<WeatherForecast> weatherForecasts;
+    protected override async Task OnInitializedAsync()
+    {
+
+        if (weatherForecasts == null)
+        {
+
+
+            var data = await Http.GetFromJsonAsync<IEnumerable<WeatherForecast>>
+      ("https://localhost:44341/weatherforecast");
+
+            weatherForecasts =  data.ToList();
+
+
+        }
+    }
+}
